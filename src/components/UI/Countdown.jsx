@@ -19,7 +19,7 @@ export default function Countdown({ expiryDate }) {
       }
     }, 1000);
 
-    return () => clearInterval();
+    return () => clearInterval(interval);
   });
 
   if (timeLeft === "Expired") {
