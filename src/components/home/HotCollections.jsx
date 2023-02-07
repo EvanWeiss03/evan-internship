@@ -6,7 +6,7 @@ import axios from "axios";
 
 const HotCollections = () => {
   const [hotCollections, setHotCollections] = useState([]);
- 
+
   const options = {
     loop: true,
     margin: 10,
@@ -23,7 +23,6 @@ const HotCollections = () => {
       "https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections"
     );
     setHotCollections(data);
-    
   };
 
   useEffect(() => {
@@ -66,7 +65,7 @@ const HotCollections = () => {
                   </div>
 
                   <div className="nft_coll_info">
-                    <Link to="/explore">
+                    <Link to={`/item-details/${collection.nftId}`}>
                       <h4>{collection.title}</h4>
                     </Link>
                     <span>ERC-{collection.code}</span>
