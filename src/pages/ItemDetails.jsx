@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import EthImage from "../images/ethereum.svg";
 import { Link, useParams } from "react-router-dom";
-import AuthorImage from "../images/author_thumbnail.jpg";
 import axios from "axios";
 import Skeleton from "../components/UI/Skeleton";
 
