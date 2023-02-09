@@ -42,7 +42,11 @@ const NewItems = () => {
             </div>
           </div>
           {!newItems.length ? (
-            <OwlCarousel {...options}>
+            <OwlCarousel
+              data-aos="fade-in"
+              data-aos-duration="1000"
+              {...options}
+            >
               {new Array(8).fill(0).map((_, index) => (
                 <div className="nft__item" key={index}>
                   <div className="author_list_pp">
@@ -101,7 +105,11 @@ const NewItems = () => {
             </OwlCarousel>
           ) : (
             <>
-              <OwlCarousel {...options}>
+              <OwlCarousel
+                data-aos="fade-in"
+                data-aos-duration="1000"
+                {...options}
+              >
                 {newItems.map((item) => (
                   <div className="nft__item" key={item.id}>
                     <div className="author_list_pp">

@@ -26,7 +26,11 @@ const TopSellers = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          <div className="col-md-12">
+          <div
+            className="col-md-12"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+          >
             <ol className="author_list">
               {topSellers.length ? (
                 <>
@@ -65,16 +69,10 @@ const TopSellers = () => {
                       </div>
                       <div className="author_list_info">
                         <Link to="/author">
-                          <Skeleton
-                            width="100px"
-                            height="20px"
-                          ></Skeleton>
+                          <Skeleton width="100px" height="20px"></Skeleton>
                         </Link>
                         <span>
-                          <Skeleton
-                            width="40px"
-                            height="20px"
-                          ></Skeleton>
+                          <Skeleton width="40px" height="20px"></Skeleton>
                         </span>
                       </div>
                     </li>
