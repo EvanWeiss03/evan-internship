@@ -5,7 +5,7 @@ import OwlCarousel from "react-owl-carousel";
 import axios from "axios";
 
 const HotCollections = () => {
-  const [hotCollections, setHotCollections] = useState([]);
+  const [hotCollections, setHotCollections] = useState();
 
   const options = {
     loop: true,
@@ -28,7 +28,6 @@ const HotCollections = () => {
   useEffect(() => {
     fetchHotCollections();
   }, []);
-
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
@@ -39,7 +38,7 @@ const HotCollections = () => {
               <div className="small-border bg-color-2"></div>
             </div>
           </div>
-          {hotCollections.length ? (
+          {hotCollections ? (
             <OwlCarousel
               data-aos="fade-in"
               data-aos-duration="1000"
